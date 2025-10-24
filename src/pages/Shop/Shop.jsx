@@ -1,13 +1,15 @@
 import styles from "./Shop.module.css";
-
+import Sidebar from "./Sidebar/Sidebar";
+import Main from "./Main/Main";
 
 function Shop() {
 
     return (
       <>
-        <main className= {styles.outerLayout} >
-          <p>lol</p>
-        </main>
+      <div className= {styles.outerLayoutShop} >
+        <Sidebar></Sidebar>
+        <Main></Main>
+      </div>
       </>
     )
   }

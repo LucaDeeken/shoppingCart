@@ -1,3 +1,5 @@
-.outerLayout {
-    background-color: blue;
+.outerLayoutShop {
+    display: grid;
+    grid-template-columns: 300px 1fr;
 }
+
