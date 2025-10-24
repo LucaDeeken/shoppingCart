@@ -1,10 +1,12 @@
+import styles from "./Cart.module.css";
+
 function Cart() {
 
     return (
       <>
-        <div>
+        <main className= {styles.outerLayout} >
           <p>lol</p>
-        </div>
+        </main>
       </>
     )
   }

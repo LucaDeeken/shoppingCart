@@ -1,10 +1,13 @@
+import styles from "./Home.module.css";
+
+
 function Home() {
 
     return (
       <>
-        <div>
+        <main className= {styles.outerLayout} >
           <p>lol</p>
-        </div>
+        </main>
       </>
     )
   }

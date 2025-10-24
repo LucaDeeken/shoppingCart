@@ -1,10 +1,13 @@
+import styles from "./Shop.module.css";
+
+
 function Shop() {
 
     return (
       <>
-        <div>
+        <main className= {styles.outerLayout} >
           <p>lol</p>
-        </div>
+        </main>
       </>
     )
   }
