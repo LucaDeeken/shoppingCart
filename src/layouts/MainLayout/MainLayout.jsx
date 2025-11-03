@@ -1,10 +1,20 @@
 import { Outlet } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 import { Link } from "react-router-dom";
-
+import React, { useState, useEffect} from "react";
 
 
 function MainLayout() {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products/1')
+    .then(response => response.json())
+    .then(data => setProducts(data));
+    console.log(products);
+  }, [])
+
 
   return (
     <>
