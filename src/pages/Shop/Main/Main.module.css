@@ -1,3 +1,47 @@
 .main {
-    background-color: aquamarine;
+  background-color: aquamarine;
+}
+
+.cardArea {
+  height: 90%;
+  width: 100%;
+  min-height: 660px;
+  padding: 4vh 4vw 0vh 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px;
+}
+
+.pageButton {
+  background-color: #eee;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.pageButton:hover {
+  background-color: #ddd;
+}
+
+.activePageButton {
+  background-color: #007bff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  color: white;
 }
