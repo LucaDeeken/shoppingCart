@@ -1,0 +1,62 @@
+.articleImg {
+  height: 500px;
+  min-width: 500px;
+  object-fit: cover;
+}
+
+.articleCard {
+  justify-self: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.articleContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  padding: 5rem;
+}
+
+.articleInfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.3rem;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+form {
+  display: flex;
+  gap: 30px;
+}
+.inputContainer {
+  display: flex;
+}
+
+.inputContainer button {
+  width: 50px;
+  background-color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.minusBtn {
+  border-right: none;
+}
+
+.plusBtn {
+  border-left: none;
+}
+
+.input {
+  width: 50px;
+
+  text-align: center;
+  border-right: none;
+  border-left: none;
+  border-color: black;
+}

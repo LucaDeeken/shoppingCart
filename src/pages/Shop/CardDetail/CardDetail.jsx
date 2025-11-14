@@ -5,39 +5,83 @@ import { ProductsContext } from "../../../layouts/MainLayout/MainLayout";
 
 function CardDetail({ productContent }) {
   const products = useContext(ProductsContext);
-  console.log(products);
   const { id } = useParams();
-  console.log(id);
+
   const [article, setArticle] = useState({});
+  const [addArticleToCart, setArticleToCart] = useState(0);
+
   useEffect(() => {
-    const articleToFind = products.find((product) => product.id === Number(id));
-    console.log(articleToFind);
-    setArticle(articleToFind);
-  }, []);
-  console.log(article);
+    if (!products || products.length === 0) {
+      fetch("/api/products.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const articleToFind = data.find((p) => p.id == id);
+          setArticle(articleToFind);
+        });
+    } else {
+      const articleToFind = products.find((p) => p.id == id);
+      setArticle(articleToFind);
+    }
+  }, [products, id]);
+
+  function increaseArticleNum() {
+    setArticleToCart((prev) => prev + 1);
+  }
+
+  function decreaseArticleNum() {
+    setArticleToCart((prev) => (prev > 0 ? prev - 1 : 0));
+  }
 
   return (
     <>
       <article className={styles.articleCard}>
-        <header>
-          {" "}
-          <h2 className={styles.title}>{article.title}</h2>
-        </header>
-        <figure>
-          <img
-            className={styles.articleImg}
-            src={article.image}
-            alt={article.name}
-          />
-        </figure>
+        <div className={styles.articleContainer}>
+          <figure>
+            <img
+              className={styles.articleImg}
+              src={article?.images?.[0] || "https://via.placeholder.com/400"}
+              alt={article?.title || "Loading..."}
+            />
+          </figure>
 
-        <section>
-          <h2>Produktbeschreibung</h2>
-          <p>{article.description}</p>
-        </section>
-        <p>
-          Preis: <span>{article.price}</span>
-        </p>
+          <section className={styles.articleInfo}>
+            <h2>{article.title}</h2>
+            <p>{article.description}</p>
+            <p>
+              Preis: <span>{article.price}</span>
+            </p>
+            <form>
+              <div className={styles.inputContainer}>
+                <button
+                  type="button"
+                  className={styles.minusBtn}
+                  onClick={() => {
+                    decreaseArticleNum();
+                  }}
+                >
+                  –
+                </button>
+                <input
+                  type="num"
+                  id="article"
+                  className={styles.input}
+                  value={addArticleToCart}
+                  readOnly
+                />
+                <button
+                  type="button"
+                  className={styles.plusBtn}
+                  onClick={() => {
+                    increaseArticleNum();
+                  }}
+                >
+                  +
+                </button>
+              </div>
+              <button>Add To Chart!</button>
+            </form>
+          </section>
+        </div>
       </article>
     </>
   );

@@ -5,7 +5,7 @@
 .cardArea {
   height: 90%;
   width: 100%;
-  min-height: 660px;
+  min-height: 650px;
   padding: 4vh 4vw 0vh 4vw;
   display: flex;
   flex-wrap: wrap;

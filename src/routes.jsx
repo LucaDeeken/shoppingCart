@@ -1,7 +1,7 @@
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
-import Cart from "./pages/Shop/CardDetail/CardDetail";
+import Cart from "./pages//Cart/Cart";
 import CardDetails from "./pages/Shop/CardDetail/CardDetail";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import { Navigate } from "react-router-dom";

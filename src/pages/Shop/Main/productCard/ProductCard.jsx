@@ -7,12 +7,10 @@ function ProductCard({ productContent, onClick }) {
         <h2 className={styles.title}>{productContent.title}</h2>
         <img
           className={styles.articleImg}
-          src={productContent.image}
+          src={productContent.images[0]}
           alt={productContent.name}
         />
-        <p>
-          Preis: <span>{productContent.price}</span>
-        </p>
+        <p className={styles.price}>{productContent.price} $</p>
       </article>
     </>
   );

@@ -10,9 +10,9 @@ function MainLayout() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://dummyjson.com/products/category/groceries")
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data.products));
     console.log(products);
   }, []);
 
