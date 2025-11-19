@@ -35,26 +35,7 @@ function MainLayout() {
         <ProductsContext.Provider value={products}>
           <Outlet /> {/* Hier landen Home, Shop, Cart */}
         </ProductsContext.Provider>
-        <footer className={styles.footer}>
-          <section className={styles.footerSectionLinks}>
-            <ul>
-              <h3>Company</h3>
-              <li>Eins</li>
-              <li>Zwei</li>
-              <li>Drei</li>
-              <li>Vier</li>
-            </ul>
-          </section>
-          <section className={styles.footerSectionLinks}>
-            <ul>
-              <h3>Brand</h3>
-              <li>Eins</li>
-              <li>Zwei</li>
-              <li>Drei</li>
-              <li>Vier</li>
-            </ul>
-          </section>
-        </footer>
+        <footer className={styles.footer}></footer>
       </div>
     </>
   );

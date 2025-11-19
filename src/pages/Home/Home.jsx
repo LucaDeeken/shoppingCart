@@ -5,10 +5,16 @@ function Home() {
     <>
       <main className={styles.outerLayout}>
         <p className={styles.welcome}>
-          Welcome to GroceryStore <br></br>
-          Hungry? Thirsty? Or just curious? <br></br> We’ve got all your
-          favorites ready to jump into your cart. <br></br> Fresh groceries,
-          delivered fast, no cape required.
+          <h2>Welcome to GroceryStore!</h2>
+          <p>
+            {" "}
+            Hungry? Thirsty? Or just curious? We’ve got all your favorites ready
+            to jump into your cart. Fresh groceries, delivered fast, no cape
+            required.
+          </p>
+          <div className={styles.btnContainer}>
+            <button className={styles.buyBtn}>Buy now!</button>
+          </div>
         </p>
       </main>
     </>

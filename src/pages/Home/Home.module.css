@@ -1,17 +1,53 @@
 .outerLayout {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/OIG2.webp");
+  background-image: url("../../assets/OIG2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .welcome {
-  font-size: 40px;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  color: rgb(2, 2, 2);
+  left: 300px;
+  top: 140px;
+  width: 430px;
+  padding: 2rem;
+}
+
+.welcome h2 {
+  font-size: 48px;
+  padding-bottom: 1.5rem;
+  font-weight: 900;
+  line-height: 130%;
+}
+
+.welcome p {
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+}
+.buyBtn {
+  width: 200px;
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 27px;
   font-weight: 800;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.buyBtn:hover {
+  background-color: black;
   color: white;
-  padding: 10rem;
-  text-align: center;
 }
