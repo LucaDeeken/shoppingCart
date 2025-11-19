@@ -1,5 +1,5 @@
 .main {
-  background-color: aquamarine;
+  background-color: #96d1c1;
 }
 
 .cardArea {
@@ -17,6 +17,7 @@
 
 .pagination {
   display: flex;
+  font-family: "Roboto", sans-serif;
   justify-content: center;
   gap: 8px;
   margin: 15px;
