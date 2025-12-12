@@ -3,6 +3,7 @@ import styles from "./MainLayout.module.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { createContext } from "react";
+import cartLogo from "../../assets/cart.png";
 
 export const ProductsContext = createContext([]);
 
@@ -20,6 +21,12 @@ function MainLayout() {
     <>
       <div className={styles.outerLayout}>
         <nav className={styles.navbar}>
+          <img
+            src={cartLogo}
+            className={styles.logo}
+            alt="Logo, which is a cart"
+          />
+          <h1 className={styles.header}>FreshCart</h1>
           <ul>
             <li>
               <Link to="/">Home</Link>

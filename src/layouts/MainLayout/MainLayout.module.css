@@ -1,16 +1,33 @@
+.header {
+  position: absolute;
+  left: 130px;
+  top: 31px;
+  font-size: 2.2rem;
+  color: rgb(28, 28, 28);
+}
+
+.logo {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  top: 8px;
+  left: 25px;
+}
+
 .outerLayout {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 120px 1fr 70px;
 }
 
 .navbar {
   display: flex;
+  position: relative;
   justify-content: center;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  background-color: rgb(0, 21, 44);
+  background-color: rgb(251, 201, 44);
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,16 +37,16 @@
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 .navbar ul a {
   text-decoration: none;
-  color: white;
+  color: #0f194d;
 }
 
 .navbar ul li a:hover {
-  color: #cac9c9;
+  color: #8f8fc6;
 }
 
 .footer {
@@ -38,7 +55,7 @@
   align-items: center;
   gap: 4rem;
   font-size: 16px;
-  background-color: rgb(0, 21, 44);
+  background-color: #010110;
 }
 
 .footerSectionLinks ul {

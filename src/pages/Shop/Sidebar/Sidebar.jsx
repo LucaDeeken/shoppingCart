@@ -1,11 +1,20 @@
 import styles from "./Sidebar.module.css";
+import Icon from "@mdi/react";
+import { mdiChevronDown } from "@mdi/js";
 
 function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <nav className={styles.nav}>
         <details>
-          <summary className={styles.navTitles}>Fruits & Vegetables</summary>
+          <summary className={styles.navTitles}>
+            Fruits & Vegetables{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Fresh Fruit</li>
             <li>Fresh Vegetables</li>
@@ -14,7 +23,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Meat & Poultry</summary>
+          <summary className={styles.navTitles}>
+            Meat & Poultry{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Beef</li>
             <li>Pork</li>
@@ -23,7 +39,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Seafood</summary>
+          <summary className={styles.navTitles}>
+            Seafood{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Fresh Fish</li>
             <li>Shrimps & Shellfish</li>
@@ -31,7 +54,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Dairy & Eggs</summary>
+          <summary className={styles.navTitles}>
+            Dairy & Eggs{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Milk</li>
             <li>Cheese</li>
@@ -40,7 +70,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Bread & Bakery</summary>
+          <summary className={styles.navTitles}>
+            Bread & Bakery{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Fresh Bread</li>
             <li>Pastries</li>
@@ -48,7 +85,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Beverages</summary>
+          <summary className={styles.navTitles}>
+            Beverages{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Water</li>
             <li>Juices</li>
@@ -57,7 +101,14 @@ function Sidebar() {
         </details>
 
         <details>
-          <summary className={styles.navTitles}>Snacks & Sweets</summary>
+          <summary className={styles.navTitles}>
+            Snacks & Sweets{" "}
+            <Icon
+              path={mdiChevronDown}
+              size={1.5}
+              className={styles.arrowDown}
+            />
+          </summary>
           <ul className={styles.ulItems}>
             <li>Chocolate</li>
             <li>Cookies</li>

@@ -1,9 +1,9 @@
 .sidebar {
   display: flex;
   justify-content: center;
-  background-color: #f4efd7;
+  background-color: rgb(251, 201, 44);
   font-family: "Roboto", sans-serif;
-  border-right: 4px solid rgb(9, 9, 9);
+  margin-right: -2rem;
 }
 
 .nav {
@@ -11,23 +11,38 @@
   flex-direction: column;
   gap: 40px;
   margin-top: 4rem;
-  margin-right: 2.5rem;
 }
 
 .navTitles {
   font-size: 22px;
   font-weight: 700;
   color: #0f194d;
+  position: relative;
 }
 
+.arrowDown {
+  position: absolute;
+  right: -70px;
+  top: 0px;
+}
+
+.arrowDown:hover {
+  color: #8f8fc6;
+}
 .navTitles:hover {
-  color: #3737bc;
+  color: #8f8fc6;
 }
 
 .ulItems {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 1rem;
-  margin-left: 0.6rem;
+  gap: 15px;
+  font-weight: 500;
+  margin-top: 1.1rem;
+  margin-left: 1.5rem;
+}
+
+.ulItems li:hover {
+  color: #8f8fc6;
+  cursor: pointer;
 }

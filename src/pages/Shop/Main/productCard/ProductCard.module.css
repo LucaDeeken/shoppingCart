@@ -16,12 +16,13 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  background-color: rgb(251, 244, 219);
 }
 
 .articleCard:hover {
   box-shadow:
-    0.5rem 0.5rem 0 #ebe5cd,
-    0.5rem 0.5rem 0 2px #000;
+    0.5rem 0.5rem 0 #8f8fc6,
+    0.5rem 0.5rem 0 3px #000;
   -webkit-transform: translate(-0.5rem, -0.5rem);
   transform: translate(-0.5rem, -0.5rem);
 }
@@ -44,5 +45,5 @@
   width: 100%;
   border-top: 3px solid rgb(0, 0, 0);
   padding-top: 10px;
-  color: #3737bc;
+  color: #0f194d;
 }
