@@ -2,6 +2,8 @@
   height: 500px;
   min-width: 500px;
   object-fit: cover;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 .articleCard {
@@ -14,7 +16,7 @@
 
 .articleContainer {
   display: grid;
-  background-color: #96d1c1;
+  background-color: rgb(251, 201, 44);
   height: 100%;
   width: 100vw;
   grid-template-columns: 1fr 1fr;
@@ -30,7 +32,7 @@
   font-size: 1.3rem;
   padding: 3rem;
   gap: 2rem;
-  border: 3px solid white;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 5px;
 }
 

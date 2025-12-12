@@ -1,3 +1,33 @@
 .sidebar {
-  background-color: rgb(240, 240, 252);
+  display: flex;
+  justify-content: center;
+  background-color: #f4efd7;
+  font-family: "Roboto", sans-serif;
+  border-right: 4px solid rgb(9, 9, 9);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 4rem;
+  margin-right: 2.5rem;
+}
+
+.navTitles {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f194d;
+}
+
+.navTitles:hover {
+  color: #3737bc;
+}
+
+.ulItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-left: 0.6rem;
 }

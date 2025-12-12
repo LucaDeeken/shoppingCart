@@ -10,27 +10,39 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid white;
-  border-radius: 7px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.articleCard:hover {
+  box-shadow:
+    0.5rem 0.5rem 0 #ebe5cd,
+    0.5rem 0.5rem 0 2px #000;
+  -webkit-transform: translate(-0.5rem, -0.5rem);
+  transform: translate(-0.5rem, -0.5rem);
 }
 
 .articleCard h2 {
   font-size: 20px;
   font-weight: 900;
   padding-top: 5px;
+  color: #0f194d;
 }
 
 .articleImg {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
 }
 
 .price {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 21px;
   width: 100%;
-  border-top: 3px solid white;
-  padding-top: 5px;
+  border-top: 3px solid rgb(0, 0, 0);
+  padding-top: 10px;
+  color: #3737bc;
 }

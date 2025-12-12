@@ -1,14 +1,14 @@
 import styles from "./Cart.module.css";
 
 function Cart() {
+  return (
+    <>
+      <main className={styles.outerLayout}>
+        <section className={styles.shoppingBag}></section>
+        <section className={styles.orderSummary}></section>
+      </main>
+    </>
+  );
+}
 
-    return (
-      <>
-        <main className= {styles.outerLayout} >
-          <p>lol</p>
-        </main>
-      </>
-    )
-  }
-  
-  export default Cart;
+export default Cart;

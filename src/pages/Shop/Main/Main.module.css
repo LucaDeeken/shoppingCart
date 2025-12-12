@@ -1,5 +1,5 @@
 .main {
-  background-color: #96d1c1;
+  background-color: rgb(251, 201, 44);
 }
 
 .cardArea {
@@ -38,7 +38,7 @@
 }
 
 .activePageButton {
-  background-color: #007bff;
+  background-color: #1157f9;
   border: none;
   padding: 6px 12px;
   cursor: pointer;
