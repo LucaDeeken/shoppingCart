@@ -4,11 +4,35 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { createContext } from "react";
 import cartLogo from "../../assets/cart.png";
-
-export const ProductsContext = createContext([]);
+import { ProductsContext } from "../../context/ProductsContext";
 
 function MainLayout() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  function changeCart(item, amount) {
+    const itemExists = cart.find((oldItem) => oldItem.product.id == item.id);
+    console.log(itemExists);
+    console.log(item);
+    if (itemExists) {
+      if (amount == 0) {
+        setCart((prevCart) =>
+          prevCart.filter((oldItem) => oldItem.product.id !== item.id)
+        );
+      } else {
+        setCart(
+          cart.map((oldItem) =>
+            oldItem.product.id == item.id
+              ? { ...oldItem, quantity: oldItem.quantity + amount }
+              : oldItem
+          )
+        );
+      }
+    } else {
+      setCart([...cart, { product: item, quantity: amount }]);
+    }
+    console.log(cart);
+  }
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/groceries")
@@ -39,7 +63,9 @@ function MainLayout() {
             </li>
           </ul>
         </nav>
-        <ProductsContext.Provider value={products}>
+        <ProductsContext.Provider
+          value={{ products, cart, setCart, changeCart }}
+        >
           <Outlet /> {/* Hier landen Home, Shop, Cart */}
         </ProductsContext.Provider>
         <footer className={styles.footer}></footer>

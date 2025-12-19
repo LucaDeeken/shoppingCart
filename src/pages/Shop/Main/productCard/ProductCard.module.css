@@ -21,7 +21,7 @@
 
 .articleCard:hover {
   box-shadow:
-    0.5rem 0.5rem 0 #8f8fc6,
+    0.5rem 0.5rem 0 #8e8edb,
     0.5rem 0.5rem 0 3px #000;
   -webkit-transform: translate(-0.5rem, -0.5rem);
   transform: translate(-0.5rem, -0.5rem);

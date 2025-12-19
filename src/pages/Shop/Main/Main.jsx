@@ -1,11 +1,11 @@
 import styles from "./Main.module.css";
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ProductsContext } from "../../../layouts/MainLayout/MainLayout";
+import { ProductsContext } from "../../../context/ProductsContext";
 import ProductCard from "./productCard/ProductCard";
 
 function Main() {
-  const products = useContext(ProductsContext);
+  const { products, cart } = useContext(ProductsContext);
   console.log(products);
   const cardsPerPage = 8;
   const { page } = useParams();

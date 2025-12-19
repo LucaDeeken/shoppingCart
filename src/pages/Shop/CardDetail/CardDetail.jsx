@@ -1,10 +1,10 @@
 import styles from "./CardDetail.module.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { ProductsContext } from "../../../layouts/MainLayout/MainLayout";
+import { ProductsContext } from "../../../context/ProductsContext";
 
 function CardDetail({ productContent }) {
-  const products = useContext(ProductsContext);
+  const { products, cart, setCart, changeCart } = useContext(ProductsContext);
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
@@ -78,7 +78,14 @@ function CardDetail({ productContent }) {
                   +
                 </button>
               </div>
-              <button>Add To Chart!</button>
+              <button
+                type="button"
+                onClick={() => {
+                  changeCart(article, addArticleToCart);
+                }}
+              >
+                Add To Chart!
+              </button>
             </form>
           </section>
         </div>
