@@ -2,6 +2,7 @@ import styles from "./CartProduct.module.css";
 import { useState, useEffect, useContext } from "react";
 
 function CartProduct({ object, name, img, amount, price, setCart, cart }) {
+  //increases the article
   function increaseArticleNum(object) {
     setCart(
       cart.map((item) =>
@@ -12,6 +13,7 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
     );
   }
 
+  //decreases the amount of the article
   function decreaseArticleNum(object) {
     if (amount < 1) {
       return;
@@ -25,7 +27,12 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
       );
     }
   }
-  console.log(object);
+
+  //deletes the article
+  function deleteItem(object) {
+    setCart(cart.filter((item) => item.product.id !== object.id));
+  }
+
   return (
     <>
       <article className={styles.article}>
@@ -33,7 +40,6 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
         <div>
           <h2>{name}</h2>
         </div>
-
         <div className={styles.inputContainer}>
           <button
             type="button"
@@ -61,7 +67,15 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
             +
           </button>
         </div>
-        <button>delete</button>
+        <button
+          type="button"
+          className={styles.deleteBtn}
+          onClick={() => {
+            deleteItem(object);
+          }}
+        >
+          delete
+        </button>
         <p>{price}</p>
       </article>
     </>
