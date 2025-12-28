@@ -48,7 +48,7 @@ function CardDetail({ productContent }) {
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <p>
-              Preis: <span>{article.price}</span>
+              Price: <span>${article.price}</span>
             </p>
             <form>
               <div className={styles.inputContainer}>

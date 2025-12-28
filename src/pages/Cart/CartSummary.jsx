@@ -30,13 +30,13 @@ function CartSummary({ cart }) {
     <>
       <h2 className={styles.header}>Order Summary</h2>
       <p className={styles.subTotal}>
-        Subtotal <span>{subTotal}$</span>
+        Subtotal: <span>${subTotal}</span>
       </p>
       <p className={styles.vat}>
-        VAT (20%) <span>{vat}%</span>
+        TAX (20%): <span>${vat}</span>
       </p>
       <p className={styles.totalPrice}>
-        Total <span>{totalPrice}$</span>
+        Total: <span>${totalPrice}</span>
       </p>
       <button className={styles.checkout}>Checkout</button>
     </>

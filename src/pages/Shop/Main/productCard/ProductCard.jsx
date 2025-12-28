@@ -10,7 +10,7 @@ function ProductCard({ productContent, onClick }) {
           src={productContent.images[0]}
           alt={productContent.name}
         />
-        <p className={styles.price}>{productContent.price} $</p>
+        <p className={styles.price}>${productContent.price}</p>
       </article>
     </>
   );

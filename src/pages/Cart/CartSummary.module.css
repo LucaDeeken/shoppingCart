@@ -1,0 +1,20 @@
+.subTotal,
+.vat,
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.subTotal span,
+.vat span,
+.totalPrice span {
+  font-weight: 700;
+}

@@ -7,14 +7,16 @@
   background-color: rgb(251, 201, 44);
   display: flex;
   justify-content: space-around;
-  margin: 5rem 5rem;
+  margin: 6rem 3rem;
 }
 
 .shoppingBag {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3rem;
   padding: 3rem;
+  background-color: white;
 }
 
 .shoppingBag.withBorder {
@@ -35,5 +37,8 @@
   border: 3px solid black;
   border-radius: 5px;
   padding: 3rem 6rem;
-  background-color: rgb(253, 253, 253);
+  background-color: white;
+  box-shadow:
+    1rem 1rem 0 #8e8edb,
+    1rem 1rem 0 3px #000;
 }

@@ -1,4 +1,6 @@
 import styles from "./CartProduct.module.css";
+import { mdiDelete } from "@mdi/js";
+import Icon from "@mdi/react";
 import { useState, useEffect, useContext } from "react";
 
 function CartProduct({ object, name, img, amount, price, setCart, cart }) {
@@ -74,9 +76,9 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
             deleteItem(object);
           }}
         >
-          delete
+          <Icon path={mdiDelete} size={1.5} className={styles.deleteBtn} />
         </button>
-        <p>{price}</p>
+        <p className={styles.price}>${price}</p>
       </article>
     </>
   );
