@@ -47,6 +47,29 @@
 
 .navbar ul li a:hover {
   color: #8f8fc6;
+  padding-bottom: 3px;
+  border-bottom: 4px solid #8f8fc6;
+}
+
+.toCart {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+  top: 40px;
+}
+
+.toCart:hover {
+  color: #8f8fc6;
+  cursor: pointer;
+}
+
+.toCart span {
+  position: absolute;
+  font-size: 1.2rem;
+  top: -20px;
+  left: 13px;
+  color: #8f8fc6;
 }
 
 .footer {
@@ -54,11 +77,84 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #010110;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .footerSectionLinks ul {
   list-style: none;
   line-height: 2rem;
+}
+
+.sidebarMobileOpen {
+  filter: brightness(0.7);
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    left: 80px;
+    top: 38px;
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    height: 80px;
+    top: 18px;
+    left: 5px;
+  }
+
+  .navbar ul {
+    gap: 2rem;
+  }
+
+  .navbar {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    left: 80px;
+    top: 38px;
+    font-size: 0rem;
+  }
+
+  .logo {
+    height: 80px;
+    top: 18px;
+    left: 5px;
+  }
+
+  .navbar ul {
+    gap: 2rem;
+  }
+
+  .navbar {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    left: 80px;
+    top: 38px;
+    font-size: 0rem;
+  }
+
+  .logo {
+    height: 80px;
+    top: 18px;
+    left: 5px;
+  }
+
+  .navbar ul {
+    gap: 1.2rem;
+  }
+
+  .navbar {
+    font-size: 22px;
+  }
 }

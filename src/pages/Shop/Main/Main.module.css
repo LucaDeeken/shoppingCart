@@ -2,19 +2,35 @@
   background-color: rgb(251, 201, 44);
 }
 
+.breadcrumbs {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Roboto", sans-serif;
+}
+
 .cardArea {
+  position: relative;
   height: 90%;
   width: 100%;
+  max-width: 1650px;
   min-height: 650px;
-  padding: 6vh 4vw 0vh 4vw;
+  padding: 80px 4vw 0vh 4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: start;
   gap: 2rem;
   animation: popIn 0.5s ease-out forwards;
+  background-color: rgb(251, 201, 44);
+  overflow-y: auto;
 }
 
+.sidebarMobileOpen {
+  filter: brightness(0.7);
+}
 .pagination {
   display: flex;
   font-family: "Roboto", sans-serif;
@@ -45,4 +61,24 @@
   border-radius: 6px;
   font-weight: 500;
   color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .cardArea {
+    height: 90%;
+    width: 100%;
+    max-width: 1650px;
+    min-height: 650px;
+    padding: 80px 4vw 0vh 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    gap: 2rem;
+    animation: popIn 0.5s ease-out forwards;
+  }
+
+  .pagination {
+    margin-top: 35px;
+  }
 }

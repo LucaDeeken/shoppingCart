@@ -1,9 +1,10 @@
 .articleImg {
   height: 500px;
-  min-width: 500px;
+  width: 500px;
   object-fit: cover;
   border: 3px solid black;
   border-radius: 5px;
+  background-color: rgb(252, 249, 239);
 }
 
 .articleCard {
@@ -22,7 +23,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 5rem 15rem 5rem 15rem;
+  padding: 4rem 15rem 4rem 15rem;
 }
 
 .articleInfo {
@@ -34,6 +35,15 @@
   gap: 2rem;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 5px;
+  background-color: rgb(252, 249, 239);
+  font-family: "Roboto", sans-serif;
+  box-shadow:
+    1rem 1rem 0 #8e8edb,
+    1rem 1rem 0 3px #000;
+}
+
+.price {
+  font-weight: 700;
 }
 
 form {
@@ -59,6 +69,11 @@ form {
   border-left: none;
 }
 
+.plusBtn:hover,
+.minusBtn:hover {
+  color: #8e8edb;
+}
+
 .input {
   width: 50px;
 
@@ -66,4 +81,93 @@ form {
   border-right: none;
   border-left: none;
   border-color: black;
+}
+
+.addToCartBtn {
+  width: 250px;
+  justify-self: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: rgb(251, 201, 44);
+}
+
+.addToCartBtn:hover {
+  color: rgb(251, 201, 44);
+  background-color: black;
+}
+
+@media screen and (max-width: 1800px) {
+  .articleImg {
+    height: 450px;
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .articleContainer {
+    padding: 5rem 6rem 5rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .articleImg {
+    height: 400px;
+    width: 400px;
+  }
+  .articleContainer {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .articleImg {
+    justify-self: center;
+    height: 350px;
+    width: 350px;
+  }
+
+  .figure {
+    justify-self: start;
+    padding-left: 3rem;
+  }
+
+  .articleContainer {
+    padding: 2rem 4rem 2rem 2rem;
+  }
+  .articleInfo {
+    max-width: 500px;
+    justify-self: center;
+    font-size: 1rem;
+  }
+  .addToCartBtn {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .articleImg {
+    justify-self: center;
+    grid-row: 1/2;
+    height: 300px;
+    width: 300px;
+  }
+  .articleContainer {
+    padding: 2rem 0rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .articleInfo {
+    grid-row: 2/3;
+    max-width: 500px;
+    justify-self: center;
+    font-size: 1rem;
+  }
+
+  .figure {
+    justify-self: center;
+    padding-left: 0px;
+  }
 }

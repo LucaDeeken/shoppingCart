@@ -1,5 +1,11 @@
 .outerLayoutShop {
-    display: grid;
-    grid-template-columns: 300px 1fr;
+  display: grid;
+  grid-template-columns: 330px 1fr;
 }
 
+@media screen and (max-width: 700px) {
+  .outerLayoutShop {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

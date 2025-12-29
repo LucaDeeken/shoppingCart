@@ -3,15 +3,15 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../../../context/ProductsContext";
 
-function CardDetail({ productContent }) {
-  const { products, cart, setCart, changeCart } = useContext(ProductsContext);
+function CardDetail() {
+  const { productsQuery, changeCart } = useContext(ProductsContext);
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
   const [addArticleToCart, setArticleToCart] = useState(0);
 
   useEffect(() => {
-    if (!products || products.length === 0) {
+    if (!productsQuery || productsQuery.length === 0) {
       fetch("/api/products.json")
         .then((res) => res.json())
         .then((data) => {
@@ -19,10 +19,10 @@ function CardDetail({ productContent }) {
           setArticle(articleToFind);
         });
     } else {
-      const articleToFind = products.find((p) => p.id == id);
+      const articleToFind = productsQuery.find((p) => p.id == id);
       setArticle(articleToFind);
     }
-  }, [products, id]);
+  }, [productsQuery, id]);
 
   function increaseArticleNum() {
     setArticleToCart((prev) => prev + 1);
@@ -36,7 +36,7 @@ function CardDetail({ productContent }) {
     <>
       <article className={styles.articleCard}>
         <div className={styles.articleContainer}>
-          <figure>
+          <figure className={styles.figure}>
             <img
               className={styles.articleImg}
               src={article?.images?.[0] || "https://via.placeholder.com/400"}
@@ -47,9 +47,7 @@ function CardDetail({ productContent }) {
           <section className={styles.articleInfo}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
-            <p>
-              Price: <span>${article.price}</span>
-            </p>
+            <p className={styles.price}>${article.price}</p>
             <form>
               <div className={styles.inputContainer}>
                 <button
@@ -79,12 +77,13 @@ function CardDetail({ productContent }) {
                 </button>
               </div>
               <button
+                className={styles.addToCartBtn}
                 type="button"
                 onClick={() => {
                   changeCart(article, addArticleToCart);
                 }}
               >
-                Add To Chart!
+                Add To Cart!
               </button>
             </form>
           </section>

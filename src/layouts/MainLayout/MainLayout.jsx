@@ -5,10 +5,17 @@ import React, { useState, useEffect } from "react";
 import { createContext } from "react";
 import cartLogo from "../../assets/cart.png";
 import { ProductsContext } from "../../context/ProductsContext";
+import { mdiCart } from "@mdi/js";
+import Icon from "@mdi/react";
+import { useNavigate } from "react-router-dom";
 
 function MainLayout() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [productsQuery, setProductQuery] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   function changeCart(item, amount) {
     const itemExists = cart.find((oldItem) => oldItem.product.id == item.id);
@@ -37,14 +44,18 @@ function MainLayout() {
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/groceries")
       .then((response) => response.json())
-      .then((data) => setProducts(data.products));
-    console.log(products);
+      .then((data) => {
+        setProducts(data.products);
+        setProductQuery(data.products);
+      });
   }, []);
 
   return (
     <>
       <div className={styles.outerLayout}>
-        <nav className={styles.navbar}>
+        <nav
+          className={`${styles.navbar} ${isSidebarOpen ? styles.sidebarMobileOpen : ""}`}
+        >
           <img
             src={cartLogo}
             className={styles.logo}
@@ -56,19 +67,49 @@ function MainLayout() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link
+                to="/shop"
+                onClick={() => {
+                  setProductQuery(products);
+                  setSelectedCategory("All");
+                }}
+              >
+                Shop
+              </Link>
             </li>
             <li>
               <Link to="/cart">Cart</Link>
             </li>
           </ul>
+          <a
+            className={styles.toCart}
+            onClick={() => {
+              navigate("/cart");
+            }}
+          >
+            <Icon path={mdiCart} size={1.5} className={styles.toCartIcon} />
+            {cart.length > 0 && <span>{cart.length}</span>}
+          </a>
         </nav>
         <ProductsContext.Provider
-          value={{ products, cart, setCart, changeCart }}
+          value={{
+            productsQuery,
+            cart,
+            products,
+            setProductQuery,
+            setCart,
+            changeCart,
+            setSelectedCategory,
+            selectedCategory,
+            isSidebarOpen,
+            setIsSidebarOpen,
+          }}
         >
           <Outlet /> {/* Hier landen Home, Shop, Cart */}
         </ProductsContext.Provider>
-        <footer className={styles.footer}></footer>
+        <footer className={styles.footer}>
+          © https://github.com/LucaDeeken
+        </footer>
       </div>
     </>
   );

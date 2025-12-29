@@ -1,9 +1,30 @@
 .sidebar {
   display: flex;
+  position: relative;
   justify-content: center;
   background-color: rgb(251, 201, 44);
   font-family: "Roboto", sans-serif;
   margin-right: -2rem;
+  padding-top: 20px;
+}
+
+.menuButton {
+  position: absolute;
+  z-index: 1000;
+  left: 20px;
+  height: 50px;
+  width: 50px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(252, 249, 239);
+  top: 30px;
+  display: none;
+}
+
+.menuButton:hover {
+  cursor: pointer;
+  background-color: rgb(195, 195, 195);
 }
 
 .nav {
@@ -11,18 +32,20 @@
   flex-direction: column;
   gap: 40px;
   margin-top: 6vh;
+  margin-left: 3vw;
 }
 
 .navTitles {
   font-size: 22px;
   font-weight: 700;
+  width: 250px;
   color: #0f194d;
   position: relative;
 }
 
 .arrowDown {
   position: absolute;
-  right: -70px;
+  right: 0;
   top: 0px;
 }
 
@@ -45,4 +68,45 @@
 .ulItems li:hover {
   color: #8f8fc6;
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .menuButton {
+    position: absolute;
+    display: block;
+    z-index: 1100;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .sidebarMobileClosed {
+    position: fixed;
+    z-index: 1000;
+    transform: translateX(-100%);
+    border-right: 3px solid black;
+    padding-top: 100px;
+    margin-top: -120px;
+    height: 100%;
+  }
+
+  .sidebarMobileOpen {
+    position: fixed;
+    height: 100%;
+    display: block;
+    z-index: 1000;
+    border-right: 3px solid black;
+    padding-top: 100px;
+    margin-top: -120px;
+    transform: translateX(0);
+  }
+
+  .arrowDown {
+    right: 20px;
+  }
+
+  .navTitles {
+    font-size: 20px;
+  }
 }

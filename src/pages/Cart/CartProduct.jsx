@@ -40,7 +40,7 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
       <article className={styles.article}>
         <img src={img} alt={name} className={styles.image} />
         <div>
-          <h2>{name}</h2>
+          <h2 className= {styles.name}>{name}</h2>
         </div>
         <div className={styles.inputContainer}>
           <button

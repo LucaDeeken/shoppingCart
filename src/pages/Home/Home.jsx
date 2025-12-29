@@ -1,6 +1,13 @@
 import styles from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { ProductsContext } from "../../context/ProductsContext";
 
 function Home() {
+  const navigate = useNavigate();
+  const { setProductQuery, products, setSelectedCategory } =
+    useContext(ProductsContext);
+
   return (
     <>
       <main className={styles.outerLayout}>
@@ -13,7 +20,16 @@ function Home() {
             required.
           </p>
           <div className={styles.btnContainer}>
-            <button className={styles.buyBtn}>Buy now!</button>
+            <button
+              className={styles.buyBtn}
+              onClick={() => {
+                setProductQuery(products);
+                setSelectedCategory("All");
+                navigate("/shop");
+              }}
+            >
+              Buy now!
+            </button>
           </div>
         </p>
       </main>

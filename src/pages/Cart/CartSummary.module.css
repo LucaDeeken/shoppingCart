@@ -1,20 +1,43 @@
+.header {
+  text-align: center;
+}
+
 .subTotal,
 .vat,
 .totalPrice {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .totalPrice {
   display: flex;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
+  padding-top: 10px;
+  border-top: 2px solid black;
 }
 
 .subTotal span,
 .vat span,
 .totalPrice span {
   font-weight: 700;
+}
+
+.checkout {
+  width: 250px;
+  justify-self: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: rgb(251, 201, 44);
+}
+
+.checkout:hover {
+  color: rgb(251, 201, 44);
+  background-color: black;
 }

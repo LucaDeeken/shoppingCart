@@ -1,5 +1,6 @@
 .article {
   display: flex;
+  min-width: 770px;
   align-items: center;
   justify-content: space-around;
   gap: 60px;
@@ -9,6 +10,11 @@
   height: 150px;
   background-color: rgb(255, 255, 255);
   border: 3px solid black;
+}
+
+.name {
+ width: 120px;
+ text-align: center;
 }
 
 .inputContainer {

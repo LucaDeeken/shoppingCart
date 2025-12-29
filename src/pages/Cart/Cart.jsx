@@ -11,11 +11,8 @@ function Cart() {
     <>
       <main className={styles.main}>
         <div className={styles.outerLayout}>
-          <section
-            className={`${styles.shoppingBag} ${
-              cart.length > 0 ? styles.withBorder : ""
-            }`}
-          >
+          <section className={styles.shoppingBag}>
+            <h2 className={styles.cartHeader}>My Shopping Cart</h2>
             {cart.length > 0 ? (
               cart.map((object) => (
                 <CartProduct
