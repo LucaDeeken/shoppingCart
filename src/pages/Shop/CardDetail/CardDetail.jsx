@@ -39,7 +39,7 @@ function CardDetail() {
         <div className={styles.articleContainer}>
           <figure className={styles.figure}>
             <h2 className={styles.articleHeader}>
-              Categorie:{" "}
+              Category:{" "}
               <span className={styles.articleHeaderCategory}>
                 {article?.tags?.[0]}
               </span>
