@@ -6,10 +6,10 @@ import { ProductsContext } from "../../../context/ProductsContext";
 function CardDetail() {
   const { productsQuery, changeCart } = useContext(ProductsContext);
   const { id } = useParams();
-
   const [article, setArticle] = useState({});
   const [addArticleToCart, setArticleToCart] = useState(0);
 
+  //searches the selected article via the id from the url
   useEffect(() => {
     if (!productsQuery || productsQuery.length === 0) {
       fetch("/api/products.json")
@@ -24,6 +24,7 @@ function CardDetail() {
     }
   }, [productsQuery, id]);
 
+  //increases or decreases the amount of the item, that is about to be added to the cart
   function increaseArticleNum() {
     setArticleToCart((prev) => prev + 1);
   }
@@ -31,6 +32,7 @@ function CardDetail() {
   function decreaseArticleNum() {
     setArticleToCart((prev) => (prev > 0 ? prev - 1 : 0));
   }
+
   return (
     <>
       <article className={styles.articleCard}>

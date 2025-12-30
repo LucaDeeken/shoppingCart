@@ -1,8 +1,20 @@
-# Shopping Cart
+# Shopping Cart Project
 
-This React-Project is under construction for learning:
+A simple React shopping cart app to practice routing, state management, and testing.
 
-- **Routing** with React Router (nested & dynamic routes)
-- **Data fetching** with `fetch` and handling loading/error states
-- **State management** using `useState` and `useEffect`
-- **Error pages** and default routes
+## Features
+
+- Navigation bar (hardcoded sidebar)
+- Home, Shop, and Cart pages
+- Product cards with quantity input, increment/decrement buttons, and "Add To Cart"
+- Real-time cart item count in navbar
+- Fetch products from a Fakestore API
+- Adjust quantities in cart (no checkout)
+- Styled for presentation
+- SPA routing ready for Netlify, Vercel, or Cloudflare Pages
+
+## Yet To Do
+
+- Testing with React Testing Library and `user-event`
+
+## Live Preview

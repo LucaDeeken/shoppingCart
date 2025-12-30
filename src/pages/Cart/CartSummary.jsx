@@ -7,6 +7,7 @@ function CartSummary({ cart }) {
   const [vat, setvat] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  //functions for calculating the price
   function getSubtotal(cart) {
     return cart.reduce((total, item) => {
       return total + item.product.price * item.quantity;
@@ -17,10 +18,10 @@ function CartSummary({ cart }) {
     return subTotalPrice * 0.2;
   }
 
+  //refreshes the price, if the cart changes
   useEffect(() => {
     const sub = getSubtotal(cart);
     const vatValue = getVAT(sub);
-
     setsubTotal(sub.toFixed(2));
     setvat(vatValue.toFixed(2));
     setTotalPrice((sub + vatValue).toFixed(2));

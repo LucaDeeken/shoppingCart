@@ -2,7 +2,7 @@ import styles from "./Sidebar.module.css";
 import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
 import { ProductsContext } from "../../../context/ProductsContext";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 
 function Sidebar() {
   const {
@@ -13,10 +13,12 @@ function Sidebar() {
     isSidebarOpen,
   } = useContext(ProductsContext);
 
+  //toggles the sidebar, if the page is used via mobile
   function toggleSidebar() {
     isSidebarOpen ? setIsSidebarOpen(false) : setIsSidebarOpen(true);
   }
 
+  //queries the productsObject via the selected category
   function loadClickedCategory(name, products) {
     const filteredProducts = products.filter(
       (item) => item.tags.indexOf(name) >= 0

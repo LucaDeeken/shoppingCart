@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { createContext } from "react";
 import cartLogo from "../../assets/cart.png";
 import { ProductsContext } from "../../context/ProductsContext";
 import { mdiCart } from "@mdi/js";
@@ -10,6 +9,7 @@ import Icon from "@mdi/react";
 import { useNavigate } from "react-router-dom";
 
 function MainLayout() {
+  //stateVars
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [productsQuery, setProductQuery] = useState([]);
@@ -17,6 +17,7 @@ function MainLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
+  //modifies the cart
   function changeCart(item, amount) {
     const itemExists = cart.find((oldItem) => oldItem.product.id == item.id);
     if (itemExists) {
@@ -38,6 +39,7 @@ function MainLayout() {
     }
   }
 
+  //fetches dummy-groceries-data
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/groceries")
       .then((response) => response.json())

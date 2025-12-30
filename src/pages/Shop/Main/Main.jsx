@@ -7,6 +7,8 @@ import ProductCard from "./productCard/ProductCard";
 function Main() {
   const { productsQuery, selectedCategory, isSidebarOpen } =
     useContext(ProductsContext);
+
+  //builds the paginationButtons
   const cardsPerPage = 8;
   const { page } = useParams();
   const navigate = useNavigate();
