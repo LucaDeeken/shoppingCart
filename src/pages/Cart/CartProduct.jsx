@@ -40,7 +40,7 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
       <article className={styles.article}>
         <img src={img} alt={name} className={styles.image} />
         <div>
-          <h2 className= {styles.name}>{name}</h2>
+          <h2 className={styles.name}>{name}</h2>
         </div>
         <div className={styles.inputContainer}>
           <button
@@ -76,7 +76,7 @@ function CartProduct({ object, name, img, amount, price, setCart, cart }) {
             deleteItem(object);
           }}
         >
-          <Icon path={mdiDelete} size={1.5} className={styles.deleteBtn} />
+          <Icon path={mdiDelete} size={1.4} className={styles.deleteBtn} />
         </button>
         <p className={styles.price}>${price}</p>
       </article>

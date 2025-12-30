@@ -41,3 +41,27 @@
   color: rgb(251, 201, 44);
   background-color: black;
 }
+
+@media screen and (max-width: 1250px) {
+  .checkout {
+    width: 250px;
+    align-self: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: rgb(251, 201, 44);
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .shoppingBag {
+    min-width: 720px;
+  }
+
+  .orderSummary {
+    display: flex;
+    width: 720px;
+  }
+}

@@ -3,19 +3,39 @@
   width: 500px;
   object-fit: cover;
   border: 3px solid black;
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: rgb(252, 249, 239);
 }
 
+.figure {
+  position: relative;
+}
 .articleCard {
   justify-self: center;
 }
 
+.articleHeader {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  font-size: 27px;
+  color: rgb(36, 36, 36);
+}
+
+.articleHeaderCategory {
+  display: inline-block;
+}
+
+.articleHeaderCategory::first-letter {
+  text-transform: uppercase;
+}
+
 .title {
-  text-align: center;
+  font-size: 25px;
 }
 
 .articleContainer {
+  font-family: "Roboto", sans-serif;
   display: grid;
   background-color: rgb(251, 201, 44);
   height: 100%;
@@ -34,11 +54,10 @@
   padding: 3rem;
   gap: 2rem;
   border: 3px solid rgb(0, 0, 0);
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: rgb(252, 249, 239);
-  font-family: "Roboto", sans-serif;
   box-shadow:
-    1rem 1rem 0 #8e8edb,
+    1rem 1rem 0 #6a6ac8,
     1rem 1rem 0 3px #000;
 }
 
@@ -71,7 +90,7 @@ form {
 
 .plusBtn:hover,
 .minusBtn:hover {
-  color: #8e8edb;
+  color: #6a6ac8;
 }
 
 .input {
@@ -125,8 +144,8 @@ form {
 @media screen and (max-width: 1150px) {
   .articleImg {
     justify-self: center;
-    height: 350px;
-    width: 350px;
+    height: 358px;
+    width: 358px;
   }
 
   .figure {
@@ -141,10 +160,17 @@ form {
     max-width: 500px;
     justify-self: center;
     font-size: 1rem;
+    margin-right: 10px;
   }
   .addToCartBtn {
     width: 150px;
     font-size: 18px;
+  }
+
+  .articleHeader {
+    padding-left: 3rem;
+    top: -75px;
+    font-size: 25px;
   }
 }
 
@@ -156,9 +182,9 @@ form {
     width: 300px;
   }
   .articleContainer {
-    padding: 2rem 0rem;
+    padding: 3rem 0rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr;
   }
   .articleInfo {
     grid-row: 2/3;
@@ -173,5 +199,54 @@ form {
   .figure {
     justify-self: center;
     padding-left: 0px;
+  }
+
+  .articleHeader {
+    top: -35px;
+    left: 50%;
+    width: 700px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 21px;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .articleInfo {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articleImg {
+    height: 280px;
+    width: 280px;
+  }
+  .articleContainer {
+    padding: 0rem;
+  }
+
+  .articleInfo {
+    grid-row: 2/3;
+    width: 80%;
+    justify-self: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .price {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .title {
+    text-align: center;
   }
 }

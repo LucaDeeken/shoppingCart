@@ -13,23 +13,19 @@
 .shoppingBag {
   display: flex;
   position: relative;
-  min-width: 880px;
+  width: 55%;
+  min-width: 720px;
+  min-height: 130px;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
   padding: 3rem;
   background-color: rgb(252, 249, 239);
   border: 3px solid black;
-  border-radius: 5px;
+  border-radius: 15px;
+  gap: 50px;
   box-shadow:
-    1rem 1rem 0 #8e8edb,
+    1rem 1rem 0 #6a6ac8,
     1rem 1rem 0 3px #000;
-}
-
-.shoppingBag p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
 }
 
 .cartHeader {
@@ -46,10 +42,91 @@
   justify-content: center;
   gap: 2.5rem;
   border: 3px solid black;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 3rem 6rem;
   background-color: rgb(252, 249, 239);
   box-shadow:
-    1rem 1rem 0 #8e8edb,
+    1rem 1rem 0 #6a6ac8,
     1rem 1rem 0 3px #000;
+}
+
+.emptyBag {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (max-width: 1350px) {
+  .orderSummary {
+    display: flex;
+    align-self: start;
+    max-height: 400px;
+    gap: 2.5rem;
+    padding: 3rem 2.5rem;
+    background-color: rgb(252, 249, 239);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .outerLayout {
+    display: grid;
+    gap: 3.5rem;
+  }
+
+  .shoppingBag {
+    display: flex;
+    position: relative;
+    min-width: 820px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    background-color: rgb(252, 249, 239);
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .shoppingBag {
+    min-width: 620px;
+  }
+
+  .orderSummary {
+    display: flex;
+    width: 620px;
+  }
+
+  .emptyBag {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .shoppingBag {
+    min-width: 520px;
+    padding: 2rem;
+  }
+
+  .orderSummary {
+    display: flex;
+    width: 520px;
+  }
+
+  .emptyBag {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .shoppingBag {
+    width: 94%;
+    min-width: unset;
+    padding: 1rem;
+  }
+
+  .orderSummary {
+    width: 94%;
+  }
+
+  .outerLayout {
+    margin: 80px 0rem;
+  }
 }

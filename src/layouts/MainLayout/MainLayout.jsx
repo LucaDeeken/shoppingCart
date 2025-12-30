@@ -19,8 +19,6 @@ function MainLayout() {
 
   function changeCart(item, amount) {
     const itemExists = cart.find((oldItem) => oldItem.product.id == item.id);
-    console.log(itemExists);
-    console.log(item);
     if (itemExists) {
       if (amount == 0) {
         setCart((prevCart) =>
@@ -38,7 +36,6 @@ function MainLayout() {
     } else {
       setCart([...cart, { product: item, quantity: amount }]);
     }
-    console.log(cart);
   }
 
   useEffect(() => {

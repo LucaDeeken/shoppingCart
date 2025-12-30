@@ -7,7 +7,6 @@ import ProductCard from "./productCard/ProductCard";
 function Main() {
   const { productsQuery, selectedCategory, isSidebarOpen } =
     useContext(ProductsContext);
-  console.log(productsQuery);
   const cardsPerPage = 8;
   const { page } = useParams();
   const navigate = useNavigate();
@@ -16,7 +15,7 @@ function Main() {
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = productsQuery.slice(indexOfFirstCard, indexOfLastCard);
-  console.log(productsQuery);
+
   //Navigates to page 1, if a number out of range was selected
   useEffect(() => {
     if (productsQuery.length === 0) return; // noch keine Produkte → nichts tun
@@ -27,10 +26,10 @@ function Main() {
 
   return (
     <>
-      <main className={styles.main}>
-        <section
-          className={`${styles.cardArea} ${isSidebarOpen ? styles.sidebarMobileOpen : ""}`}
-        >
+      <main
+        className={`${styles.main} ${isSidebarOpen ? styles.sidebarMobileOpen : ""}`}
+      >
+        <section className={styles.cardArea}>
           <h2 className={styles.breadcrumbs}>
             {selectedCategory} ({productsQuery.length})
           </h2>

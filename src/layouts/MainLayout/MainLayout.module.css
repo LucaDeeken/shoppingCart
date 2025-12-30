@@ -29,6 +29,8 @@
   font-weight: 700;
   background-color: rgb(251, 201, 44);
   font-family: "Roboto", sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -46,9 +48,9 @@
 }
 
 .navbar ul li a:hover {
-  color: #8f8fc6;
+  color: #6a6ac8;
   padding-bottom: 3px;
-  border-bottom: 4px solid #8f8fc6;
+  border-bottom: 4px solid #6a6ac8;
 }
 
 .toCart {
@@ -60,7 +62,7 @@
 }
 
 .toCart:hover {
-  color: #8f8fc6;
+  color: #6a6ac8;
   cursor: pointer;
 }
 
@@ -69,7 +71,7 @@
   font-size: 1.2rem;
   top: -20px;
   left: 13px;
-  color: #8f8fc6;
+  color: #6a6ac8;
 }
 
 .footer {

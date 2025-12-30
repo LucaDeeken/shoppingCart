@@ -31,12 +31,17 @@ function CardDetail() {
   function decreaseArticleNum() {
     setArticleToCart((prev) => (prev > 0 ? prev - 1 : 0));
   }
-
   return (
     <>
       <article className={styles.articleCard}>
         <div className={styles.articleContainer}>
           <figure className={styles.figure}>
+            <h2 className={styles.articleHeader}>
+              Categorie:{" "}
+              <span className={styles.articleHeaderCategory}>
+                {article?.tags?.[0]}
+              </span>
+            </h2>
             <img
               className={styles.articleImg}
               src={article?.images?.[0] || "https://via.placeholder.com/400"}
@@ -45,7 +50,7 @@ function CardDetail() {
           </figure>
 
           <section className={styles.articleInfo}>
-            <h2>{article.title}</h2>
+            <h3 className={styles.title}>{article.title}</h3>
             <p>{article.description}</p>
             <p className={styles.price}>${article.price}</p>
             <form>

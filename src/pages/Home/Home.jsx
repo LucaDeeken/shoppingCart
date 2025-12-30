@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <main className={styles.outerLayout}>
-        <p className={styles.welcome}>
+        <div className={styles.welcome}>
           <h2>Welcome to GroceryStore!</h2>
           <p>
             {" "}
@@ -31,7 +31,7 @@ function Home() {
               Buy now!
             </button>
           </div>
-        </p>
+        </div>
       </main>
     </>
   );

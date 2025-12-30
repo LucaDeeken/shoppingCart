@@ -27,7 +27,9 @@ function Cart() {
                 />
               ))
             ) : (
-              <p>There are no items in your cart.</p>
+              <p className={styles.emptyBag}>
+                There are no items in your cart.
+              </p>
             )}
           </section>
 

@@ -50,10 +50,10 @@
 }
 
 .arrowDown:hover {
-  color: #8e8edb;
+  color: #6a6ac8;
 }
 .navTitles:hover {
-  color: #8e8edb;
+  color: #6a6ac8;
 }
 
 .ulItems {
@@ -66,7 +66,7 @@
 }
 
 .ulItems li:hover {
-  color: #8f8fc6;
+  color: #6a6ac8;
   cursor: pointer;
 }
 
