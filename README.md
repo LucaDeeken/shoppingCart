@@ -18,3 +18,4 @@ A simple React shopping cart app to practice routing, state management, and test
 - Testing with React Testing Library and `user-event`
 
 ## Live Preview
+-> https://freshcart-nepoluc.netlify.app/
