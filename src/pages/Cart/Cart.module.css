@@ -119,12 +119,12 @@
   .shoppingBag {
     min-width: unset;
     padding: 1rem;
-    width: 80%;
+    width: 84%;
     justify-self: center;
   }
 
   .orderSummary {
-    width: 80%;
+    width: 84%;
     justify-self: center;
   }
 
