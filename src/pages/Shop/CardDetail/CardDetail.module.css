@@ -250,4 +250,8 @@ form {
   .title {
     text-align: center;
   }
+
+  .figure {
+    margin-top: 32px;
+  }
 }
