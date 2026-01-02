@@ -117,18 +117,37 @@
 
 @media screen and (max-width: 630px) {
   .shoppingBag {
-    min-width: unset;
-    padding: 1rem;
-    width: 84%;
+    min-width: 420px;
     justify-self: center;
   }
 
   .orderSummary {
-    width: 84%;
+    width: 420px;
     justify-self: center;
   }
 
   .outerLayout {
     margin: 80px 0rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .shoppingBag {
+    min-width: 350px;
+  }
+
+  .orderSummary {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .shoppingBag {
+    min-width: unset;
+    padding: 1rem;
+    width: 84%;
+  }
+
+  .orderSummary {
+    width: 84%;
   }
 }
