@@ -117,13 +117,15 @@
 
 @media screen and (max-width: 630px) {
   .shoppingBag {
-    width: 94%;
     min-width: unset;
     padding: 1rem;
+    width: 80%;
+    justify-self: center;
   }
 
   .orderSummary {
-    width: 94%;
+    width: 80%;
+    justify-self: center;
   }
 
   .outerLayout {
